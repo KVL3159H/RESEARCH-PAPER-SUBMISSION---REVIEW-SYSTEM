@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Dashboard - Research Paper Submission System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo">
+                <i class="fas fa-file-invoice"></i> RESEARCH PAPER SYSTEM
+            </a>
+            <div class="user-profile">
+                <span>Editor-in-Chief</span>
+                <i class="fas fa-user-shield fa-lg"></i>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <h2 class="mb-4">EDITOR DASHBOARD</h2>
+
+        <div class="dashboard-grid">
+            <div class="stat-card" style="border-left-color: var(--primary-color);">
+                <span class="label">Total Submissions</span>
+                <span class="value">25</span>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--warning-color);">
+                <span class="label">Under Review</span>
+                <span class="value">8</span>
+            </div>
+            <div class="stat-card" style="border-left-color: var(--accent-color);">
+                <span class="label">Decision Pending</span>
+                <span class="value">5</span>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="card-title">PENDING SUBMISSIONS</h4>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-outline"
+                        style="width: auto; font-size: 0.8rem; padding: 0.5rem 1rem;">Filter</button>
+                    <button class="btn btn-primary" style="width: auto; font-size: 0.8rem; padding: 0.5rem 1rem;">Export
+                        Report</button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Paper ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>AI in Healthcare: A Comprehensive Review</td>
+                            <td>Dr. Smith</td>
+                            <td><a href="assign-reviewer.html" class="btn btn-outline"
+                                    style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.8rem; text-decoration: none;">Assign
+                                    Reviewers</a></td>
+                        </tr>
+                        <tr>
+                            <td>#1002</td>
+                            <td>Cloud Computing Evolution</td>
+                            <td>Prof. Lee</td>
+                            <td><a href="#" class="btn btn-outline"
+                                    style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.8rem; text-decoration: none;">View
+                                    Reviews</a></td>
+                        </tr>
+                        <tr>
+                            <td>#1003</td>
+                            <td>Blockchain Scalability</td>
+                            <td>Dr. Khan</td>
+                            <td><a href="#" class="btn btn-primary"
+                                    style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.8rem; text-decoration: none;">Make
+                                    Decision</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dashboard-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="stat-card" style="text-align: center; cursor: pointer;">
+                <i class="fas fa-chart-bar"
+                    style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-color);"></i>
+                <span style="font-weight: 600;">REPORTS</span>
+            </div>
+            <div class="stat-card" style="text-align: center; cursor: pointer;">
+                <i class="fas fa-users"
+                    style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-color);"></i>
+                <span style="font-weight: 600;">USERS</span>
+            </div>
+            <div class="stat-card" style="text-align: center; cursor: pointer;">
+                <i class="fas fa-cog"
+                    style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-color);"></i>
+                <span style="font-weight: 600;">SETTINGS</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Editor Panel | Research Paper Submission System</p>
+        </div>
+    </footer>
+</body>
+
+</html>

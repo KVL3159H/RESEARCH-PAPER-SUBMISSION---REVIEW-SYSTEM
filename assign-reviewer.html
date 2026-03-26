@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Reviewers - Research Paper System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="editor-dashboard.html" class="logo">
+                <i class="fas fa-file-invoice"></i> RESEARCH PAPER SYSTEM
+            </a>
+            <div class="user-profile">
+                <span>Editor-in-Chief</span>
+                <i class="fas fa-user-shield fa-lg"></i>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <div style="display: flex; justify-content: space-between; align-items: center;" class="mb-4">
+            <h2>ASSIGN REVIEWERS - PAPER #1001</h2>
+            <a href="editor-dashboard.html" class="btn btn-outline" style="width: auto;"><i
+                    class="fas fa-arrow-left"></i> Back to Dashboard</a>
+        </div>
+
+        <div class="card mb-4" style="padding: 1.5rem; border-left: 5px solid var(--primary-color);">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div>
+                    <label class="text-muted" style="font-size: 0.8rem; display: block;">Paper Title</label>
+                    <span style="font-weight: 600;">AI in Healthcare: A Comprehensive Review</span>
+                </div>
+                <div>
+                    <label class="text-muted" style="font-size: 0.8rem; display: block;">Author</label>
+                    <span style="font-weight: 600;">Dr. John Smith</span>
+                </div>
+                <div>
+                    <label class="text-muted" style="font-size: 0.8rem; display: block;">Category</label>
+                    <span style="font-weight: 600;">Research Article</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">AVAILABLE REVIEWERS</h4>
+                <div class="form-group" style="margin-bottom: 0; width: 250px;">
+                    <input type="text" class="form-control" placeholder="Search by name or expertise..."
+                        style="padding: 0.5rem;">
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">Select</th>
+                            <th>Reviewer Name</th>
+                            <th>Expertise</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" checked></td>
+                            <td>Dr. Sarah Lee</td>
+                            <td>AI/ML, Data Systems</td>
+                            <td><span class="badge badge-accepted">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Prof. James Kim</td>
+                            <td>Healthcare Informatics</td>
+                            <td><span class="badge badge-accepted">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked></td>
+                            <td>Dr. Maria Garcia</td>
+                            <td>Data Science, Analytics</td>
+                            <td><span class="badge badge-accepted">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <form style="margin-top: 2rem;" action="editor-dashboard.html">
+            <div class="form-row mb-4">
+                <div class="form-group">
+                    <label for="deadline">Review Deadline</label>
+                    <input type="date" id="deadline" class="form-control" value="2026-04-15">
+                    <small class="text-muted">Maximum 4 weeks allowed.</small>
+                </div>
+            </div>
+            <div class="form-group mb-4">
+                <label for="instructions">Special Instructions</label>
+                <textarea id="instructions" class="form-control" rows="3"
+                    placeholder="Please focus on methodology..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: auto; padding: 0.8rem 3rem;">ASSIGN
+                REVIEWERS</button>
+        </form>
+    </main>
+
+    <footer class="mt-4">
+        <div class="container">
+            <p>&copy; 2026 Editor Panel | Research Paper Submission System</p>
+        </div>
+    </footer>
+</body>
+
+</html>

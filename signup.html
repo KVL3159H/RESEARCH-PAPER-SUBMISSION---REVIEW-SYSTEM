@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Research Paper Submission & Review System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="auth-wrapper">
+    <div class="auth-card">
+        <h1>RESEARCH PAPER SYSTEM</h1>
+        <p class="subtitle">CREATE NEW ACCOUNT</p>
+
+        <form action="login.html">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" class="form-control" placeholder="Enter full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter email address" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm">Confirm</label>
+                    <input type="password" id="confirm" class="form-control" placeholder="Confirm" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="affiliation">Affiliation</label>
+                <input type="text" id="affiliation" class="form-control" placeholder="University/Institution" required>
+            </div>
+
+            <div class="form-group">
+                <label>Role</label>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="role" value="author" checked> Author
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="role" value="reviewer"> Reviewer
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="role" value="editor"> Editor
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group" id="expertise-group" style="display: none;">
+                <label for="expertise">Expertise (for reviewers)</label>
+                <input type="text" id="expertise" class="form-control" placeholder="e.g. AI, Machine Learning, Cloud">
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-4 mt-4">REGISTER</button>
+
+            <p class="text-center" style="font-size: 0.9rem;">
+                Already have an account? <a href="login.html"
+                    style="color: var(--primary-color); font-weight: 600; text-decoration: none;">LOGIN</a>
+            </p>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
