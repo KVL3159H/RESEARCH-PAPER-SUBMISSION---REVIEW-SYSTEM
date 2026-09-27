@@ -1,41 +1,123 @@
 # Research Paper Submission & Review System
 
-A professional, academic-focused management system for research papers. This system streamlines the peer-review process from submission to final decision, providing distinct interfaces for Authors, Reviewers, and Editors.
+A role-based academic workflow prototype for managing research-paper submission, peer review, editorial assignment, and final decisions.
 
-## 🚀 Features
-- **Author Dashboard**: Submit research papers, track status, and manage active submissions.
-- **Reviewer Portal**: Access assigned papers, provide scores, and submit detailed reviews.
-- **Editor-in-Chief Panel**: Manage all submissions, assign reviewers, and make final editorial decisions.
-- **Modern UI**: Clean, light-themed professional design focused on readability and academic standards.
-- **Dynamic Forms**: Role-based signup and interactive file upload feedback.
-- **Robust Database**: Fully normalized SQL schema ensuring data integrity.
+The repository provides front-end interfaces and a relational database schema for Authors, Reviewers, and Editors. It is suitable as a mini-project foundation and can be connected to a backend such as Node.js, PHP, Java, or Python.
 
-## 📁 Project Structure
-- `login.html` / `signup.html`: Authentication entry points.
-- `author-dashboard.html` / `submit-paper.html`: Author-specific pages.
-- `editor-dashboard.html` / `assign-reviewer.html`: Editor-specific pages.
-- `reviewer-dashboard.html` / `submit-review.html`: Reviewer-specific pages.
-- `css/style.css`: Core professional light theme stylesheet.
-- `js/main.js`: Shared JS for UI interactions.
-- `schema.sql`: Database initialization script with sample data.
+## Core Roles
 
-## 🛠️ Getting Started
-1. **Database Setup**: Import `schema.sql` into your MySQL/PostgreSQL database.
-2. **UI Preview**: Open `login.html` in any modern web browser to explore the interfaces.
-3. **Integration**: Connect these UI templates to a backend (PHP, Node.js, etc.) using the provided database schema.
+| Role | Main Responsibilities |
+| --- | --- |
+| Author | Register, submit papers, and track review status |
+| Reviewer | View assigned papers, score submissions, and submit review feedback |
+| Editor | Manage submissions, assign reviewers, and make final decisions |
 
-## 📊 System Flowchart
-```mermaid
-graph TD
-    A[Author Register/Login] --> B[Author Submit Paper]
-    B --> C{Editor Dashboard}
-    C --> D[Assign Reviewers]
-    D --> E[Reviewer Dashboard]
-    E --> F[Submit Review & Score]
-    F --> G{Editor Decision}
-    G -- "Accept/Reject/Revise" --> H[Author Result Notification]
-    H --> I[Archive/Publish]
+## Features
+
+- author dashboard and paper submission flow;
+- reviewer dashboard and structured review form;
+- editor dashboard and reviewer-assignment workflow;
+- role-specific navigation and interfaces;
+- normalized SQL schema;
+- clean academic light theme;
+- responsive HTML/CSS/JavaScript interface;
+- clear workflow from submission to acceptance/revision/rejection.
+
+## Project Structure
+
+```text
+login.html
+signup.html
+author-dashboard.html
+submit-paper.html
+reviewer-dashboard.html
+submit-review.html
+editor-dashboard.html
+assign-reviewer.html
+css/
+└── style.css
+js/
+└── main.js
+schema.sql
 ```
 
+## Workflow
+
+```mermaid
+flowchart LR
+    A[Author] --> B[Submit Paper]
+    B --> C[Editor Screening]
+    C --> D[Assign Reviewer]
+    D --> E[Peer Review]
+    E --> F[Editor Decision]
+    F -->|Accept| G[Accepted]
+    F -->|Revise| H[Revision Requested]
+    F -->|Reject| I[Rejected]
+    H --> B
+```
+
+## Getting Started
+
+### 1. Clone
+
+```bash
+git clone https://github.com/KVL3159H/RESEARCH-PAPER-SUBMISSION---REVIEW-SYSTEM.git
+cd RESEARCH-PAPER-SUBMISSION---REVIEW-SYSTEM
+```
+
+### 2. Preview the Interface
+
+Open `login.html` in a modern browser.
+
+For a better local development experience, serve the folder with a lightweight development server instead of opening files directly.
+
+### 3. Database
+
+Import `schema.sql` into your selected relational database and adapt SQL syntax when necessary for MySQL/PostgreSQL differences.
+
+## Backend Integration
+
+The current repository is primarily an interface/database prototype. A production implementation should add a trusted backend responsible for:
+
+- authentication and authorization;
+- password hashing;
+- paper-file storage;
+- reviewer assignment;
+- conflict-of-interest checks;
+- review visibility rules;
+- editorial decisions;
+- audit logs;
+- email/notification delivery;
+- database validation and transactions.
+
+## Security & Privacy
+
+Research submissions may contain confidential or unpublished work. Before real institutional use:
+
+- enforce server-side role checks;
+- keep uploaded papers private;
+- use encrypted transport;
+- validate all uploads;
+- restrict file types and sizes;
+- protect reviewer identities according to the review model;
+- log administrative actions;
+- follow institutional data-retention requirements.
+
+## Suggested Roadmap
+
+- add a backend REST API;
+- implement real login and session management;
+- add secure PDF upload/storage;
+- implement reviewer invitation and assignment states;
+- add blind/double-blind review options;
+- add email notifications;
+- add automated tests;
+- add deployment documentation.
+
+## Contributing
+
+Focused improvements are welcome, especially accessibility fixes, validation, backend integration, tests, and documentation.
+
 ---
-*Developed for Mini Project: Research Paper Submission & Review System*
+
+Developed as an academic mini-project demonstrating the core lifecycle of research-paper submission and peer review.
